@@ -1,14 +1,13 @@
 import React from "react";
+import Form from "./Form";
+
+let isUserRegistered = false;
 
 function App() {
   return (
     <div className="container">
-      <h1>Hello</h1>
-      <form className="form">
-        <input type="text" placeholder="Username" />
-        <input type="password" placeholder="Password" />
-        <button type="submit">Login</button>
-      </form>
+      {!isUserRegistered && <h1>Hello</h1>}
+      <Form isUserRegistered={isUserRegistered} />
     </div>
   );
 }
